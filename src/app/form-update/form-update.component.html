@@ -1,0 +1,17 @@
+<form [formGroup]="userForm"   >
+  <div >
+  <input type ="number" name="id"   formControlName="id"  >
+  <input type ="text"   name="firstName"  formControlName="firstName"  >
+  <input type ="text"   name="lasttName" formControlName="lasttName" >
+  <input type ="number"  name="age"  formControlName="age"  >
+  <input type ="text"  name="country"  formControlName="country"   >
+  <button type="submit" class="btn btn-success"  (click)="update(userForm.value,1)">Update</button>
+  <button  class="btn btn-danger" (click)="delete(1)">Delete</button>
+  <div *ngIf=" lastUpdate ==1" >
+      <div class="alert alert-success d-flex align-items-center" role="alert"  >
+      <strong>Update success !!</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  </div> 
+</div>
+</form>
